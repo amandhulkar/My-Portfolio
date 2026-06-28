@@ -95,12 +95,13 @@ Render settings:
 - **Publish Directory:** `dist`
 - **Environment Variables:** add the same `VITE_EMAILJS_*` values from `.env`
 
-After Render gives the final URL, update these placeholders in `index.html`:
+Deployed URL:
 
 ```txt
-https://your-render-url.onrender.com/
-https://your-render-url.onrender.com/og-image.png
+https://my-porfolio-y27w.onrender.com/
 ```
+
+SEO metadata in `index.html` already points to this Render URL.
 
 ## Final Checklist
 
