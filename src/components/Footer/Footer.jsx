@@ -1,10 +1,11 @@
 import React from 'react';
 import { Mail, Heart } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '../UI/SocialIcons';
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from '../UI/SocialIcons';
 
 const socialLinks = {
   github: 'https://github.com/amandhulkar',
   linkedin: 'https://www.linkedin.com/in/amandhulkar23',
+  whatsapp: 'https://wa.me/918952004922',
 };
 
 export default function Footer() {
@@ -47,6 +48,15 @@ export default function Footer() {
             aria-label="LinkedIn Redirect"
           >
             <LinkedinIcon className="h-5 w-5" />
+          </a>
+          <a
+            href={socialLinks.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-green-400 transition-colors duration-200"
+            aria-label="WhatsApp Redirect"
+          >
+            <WhatsappIcon className="h-5 w-5" />
           </a>
           <a
             href="mailto:amandhulkar0079@gmail.com"

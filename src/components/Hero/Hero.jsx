@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { GithubIcon, LinkedinIcon } from '../UI/SocialIcons';
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from '../UI/SocialIcons';
 import { MailIcon, ArrowRightIcon, DownloadIcon } from '../UI/SocialIcons';
 
 const socialLinks = {
   github: 'https://github.com/amandhulkar',
   linkedin: 'https://www.linkedin.com/in/amandhulkar23',
+  whatsapp: 'https://wa.me/918952004922',
 };
 
 export default function Hero() {
@@ -159,6 +160,16 @@ export default function Hero() {
               </a>
 
               <a
+                href={socialLinks.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-card/50 border border-white/5 hover:border-green-400/40 text-gray-400 hover:text-green-400 transition-all duration-300 hover:-translate-y-1 hover:shadow-glass-hover"
+                aria-label="WhatsApp Chat"
+              >
+                <WhatsappIcon className="h-5 w-5" />
+              </a>
+
+              <a
                 href="#contact"
                 onClick={(e) => scrollToSection(e, 'contact')}
                 className="p-3 rounded-full bg-card/50 border border-white/5 hover:border-accent/40 text-gray-400 hover:text-accent transition-all duration-300 hover:-translate-y-1 hover:shadow-glass-hover"
@@ -188,7 +199,8 @@ export default function Hero() {
                 </div>
               </div>
               <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full border border-white/10 bg-[#0F172A]/90 px-4 py-2 text-xs font-semibold font-mono text-accent shadow-lg backdrop-blur-md">
-                MERN Developer
+                {/* MERN Developer */}
+                Web Developer
               </div>
             </div>
           </motion.div>

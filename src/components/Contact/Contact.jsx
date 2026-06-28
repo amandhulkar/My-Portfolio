@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Mail, Send, Phone, MapPin } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '../UI/SocialIcons';
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from '../UI/SocialIcons';
 
 const socialLinks = {
   github: 'https://github.com/amandhulkar',
   linkedin: 'https://www.linkedin.com/in/amandhulkar23',
+  whatsapp: 'https://wa.me/918952004922',
 };
 
 export default function Contact() {
@@ -118,6 +119,21 @@ export default function Contact() {
                 </div>
               </a>
 
+              <a
+                href={socialLinks.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 rounded-xl bg-card/40 border border-white/5 hover:border-green-400/40 text-gray-300 hover:text-white transition-all duration-300 group"
+              >
+                <div className="p-3 rounded-lg bg-white/5 text-green-400 group-hover:text-green-300 transition-colors">
+                  <WhatsappIcon className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-[10px] text-gray-500 font-mono uppercase tracking-wider">WhatsApp</p>
+                  <p className="text-sm font-semibold font-poppins">Chat on WhatsApp</p>
+                </div>
+              </a>
+
               <div className="flex items-center gap-4 p-4 rounded-xl bg-card/40 border border-white/5 text-gray-300">
                 <div className="p-3 rounded-lg bg-white/5 text-accent">
                   <MapPin className="h-5 w-5" />
@@ -130,12 +146,12 @@ export default function Contact() {
             </div>
 
             {/* Quick External Actions */}
-            <div className="flex gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <a
                 href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-3.5 px-4 rounded-xl bg-card/40 border border-white/5 hover:border-accent/40 text-gray-300 hover:text-white transition-all flex items-center justify-center gap-2 font-semibold text-xs font-poppins duration-300"
+                className="py-3.5 px-4 rounded-xl bg-card/40 border border-white/5 hover:border-accent/40 text-gray-300 hover:text-white transition-all flex items-center justify-center gap-2 font-semibold text-xs font-poppins duration-300"
               >
                 <GithubIcon className="h-4 w-4" />
                 GitHub
@@ -144,10 +160,19 @@ export default function Contact() {
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-3.5 px-4 rounded-xl bg-card/40 border border-white/5 hover:border-accent/40 text-gray-300 hover:text-white transition-all flex items-center justify-center gap-2 font-semibold text-xs font-poppins duration-300"
+                className="py-3.5 px-4 rounded-xl bg-card/40 border border-white/5 hover:border-accent/40 text-gray-300 hover:text-white transition-all flex items-center justify-center gap-2 font-semibold text-xs font-poppins duration-300"
               >
                 <LinkedinIcon className="h-4 w-4" />
                 LinkedIn
+              </a>
+              <a
+                href={socialLinks.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-3.5 px-4 rounded-xl bg-card/40 border border-white/5 hover:border-green-400/40 text-gray-300 hover:text-white transition-all flex items-center justify-center gap-2 font-semibold text-xs font-poppins duration-300"
+              >
+                <WhatsappIcon className="h-4 w-4" />
+                WhatsApp
               </a>
             </div>
           </motion.div>
